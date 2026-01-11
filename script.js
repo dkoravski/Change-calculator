@@ -30,12 +30,12 @@ function calculateChange() {
 
     // Validate inputs
     if (isNaN(totalToPay) || isNaN(paymentAmount)) {
-        showError('Please enter valid numbers for both fields');
+        showError('Моля въведете валидни числа в двете полета');
         return;
     }
 
     if (totalToPay <= 0 || paymentAmount <= 0) {
-        showError('Both amounts must be greater than zero');
+        showError('И двата размери трябва да са по-големи от нула');
         return;
     }
 
@@ -50,7 +50,7 @@ function calculateChange() {
 
     // Check if payment is sufficient
     if (change < 0) {
-        showError(`Insufficient payment. Amount needed: ${Math.abs(change).toFixed(2)} EUR more`);
+        showError(`Недостатъчно плащане. Необходима е още ${Math.abs(change).toFixed(2)}`);
         return;
     }
 
